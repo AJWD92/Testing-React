@@ -10,3 +10,9 @@ test('making sure starwars logo renders', () => {
     const logoImg =  wrapper.queryByAltText(/logo/i)
     expect(logoImg).toBeInTheDocument();
 });
+
+test('making sure buttons render', () => {
+    const { getByTestId } = rtl.render(<App />);
+    getByTestId('next');
+    getByTestId('prev')
+})
